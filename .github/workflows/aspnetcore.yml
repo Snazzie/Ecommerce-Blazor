@@ -16,6 +16,7 @@ jobs:
     - name: Build with dotnet
       run: dotnet build --configuration Release
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Test with dotnet
